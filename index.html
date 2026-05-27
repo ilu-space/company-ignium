@@ -111,150 +111,135 @@
     font-size: 0.8rem;
     font-weight: 600;
     padding: 6px 14px;
-    border-radius: 100px;
+    border-radius: 999px;
     margin-bottom: 28px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
   .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.2rem);
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
     font-weight: 900;
     color: var(--text-dark);
     margin-bottom: 24px;
-    letter-spacing: -1px;
   }
   .hero h1 em { color: var(--orange); font-style: normal; }
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--text-mid);
     max-width: 580px;
     margin-bottom: 40px;
-    line-height: 1.7;
   }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
     background: var(--orange);
     color: #fff;
-    padding: 16px 32px;
+    padding: 14px 32px;
     border-radius: 8px;
-    font-size: 1rem;
     font-weight: 700;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-    font-family: 'Inter', sans-serif;
+    transition: background 0.2s;
   }
-  .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--orange-light); }
   .btn-ghost {
-    color: var(--text-mid);
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 16px 0;
+    background: transparent;
+    color: var(--text-dark);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.2s;
   }
-  .hero-stats {
-    display: flex;
-    gap: 48px;
-    margin-top: 64px;
-    padding-top: 48px;
+  .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+  /* SOCIAL PROOF */
+  .social-proof {
+    padding: 48px 0;
+    background: var(--white);
     border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .social-proof-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
     flex-wrap: wrap;
   }
-  .stat-item {}
+  .stat { text-align: center; }
   .stat-number {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--orange);
-    line-height: 1;
   }
-  .stat-label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+  .stat-label { font-size: 0.85rem; color: var(--text-light); font-weight: 500; margin-top: 2px; }
 
-  /* SECTION SHARED */
+  /* SECTIONS */
   section { padding: 96px 0; }
   .section-label {
-    display: inline-block;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--orange);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   .section-title {
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 900;
     color: var(--text-dark);
     margin-bottom: 16px;
-    letter-spacing: -0.5px;
   }
   .section-sub {
     font-size: 1.05rem;
     color: var(--text-mid);
     max-width: 560px;
-    line-height: 1.7;
+    margin-bottom: 56px;
   }
 
   /* HOW IT WORKS */
-  .how-section { background: var(--white); }
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 32px;
-    margin-top: 56px;
-  }
-  .step-card {
+  .how-bg { background: var(--white); }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+  .step {
     background: var(--off-white);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 36px 28px;
-    position: relative;
+    padding: 32px 28px;
   }
   .step-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--orange-dim);
-    line-height: 1;
-    margin-bottom: 16px;
+    width: 40px; height: 40px;
+    background: var(--orange);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
-  .step-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: var(--text-dark); }
-  .step-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; }
+  .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: var(--text-dark); font-family: 'Inter', sans-serif; }
+  .step p { font-size: 0.9rem; color: var(--text-mid); }
 
   /* SERVICES */
-  .services-section { background: var(--off-white); }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 56px;
-  }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
   .service-card {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 32px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.2s, border-color 0.2s;
   }
-  .service-card:hover { box-shadow: 0 8px 32px rgba(232,99,10,0.10); transform: translateY(-2px); }
-  .service-icon {
-    width: 48px; height: 48px;
-    background: var(--orange-dim);
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-  }
-  .service-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; color: var(--text-dark); }
-  .service-card p { font-size: 0.875rem; color: var(--text-mid); line-height: 1.6; }
+  .service-card:hover { box-shadow: 0 8px 32px rgba(232,99,10,0.08); border-color: var(--orange-border); }
+  .service-icon { font-size: 2rem; margin-bottom: 16px; }
+  .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--text-dark); font-family: 'Inter', sans-serif; }
+  .service-card p { font-size: 0.9rem; color: var(--text-mid); }
 
   /* RESULTS */
-  .results-section { background: var(--white); }
-  .results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 56px;
-  }
+  .results-bg { background: var(--white); }
+  .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
   .result-card {
     background: var(--off-white);
     border: 1px solid var(--border);
@@ -263,142 +248,139 @@
   }
   .result-metric {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 900;
     color: var(--orange);
-    line-height: 1;
     margin-bottom: 8px;
   }
-  .result-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--text-dark); }
-  .result-card p { font-size: 0.875rem; color: var(--text-mid); line-height: 1.6; }
+  .result-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; font-family: 'Inter', sans-serif; }
+  .result-card p { font-size: 0.875rem; color: var(--text-mid); }
 
   /* PRICING */
-  .pricing-section { background: var(--off-white); }
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 56px;
-    align-items: start;
-  }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; }
   .pricing-card {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 36px 32px;
+    padding: 40px 32px;
     position: relative;
   }
   .pricing-card.featured {
     border-color: var(--orange);
-    box-shadow: 0 8px 40px rgba(232,99,10,0.14);
+    box-shadow: 0 8px 40px rgba(232,99,10,0.12);
   }
   .featured-badge {
     position: absolute;
     top: -14px; left: 50%; transform: translateX(-50%);
     background: var(--orange);
     color: #fff;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 700;
     padding: 4px 16px;
-    border-radius: 100px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
     white-space: nowrap;
   }
-  .plan-name { font-size: 0.85rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+  .plan-name { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 12px; }
   .plan-price {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     font-weight: 900;
     color: var(--text-dark);
-    line-height: 1;
     margin-bottom: 4px;
   }
-  .plan-price span { font-size: 1rem; font-weight: 500; color: var(--text-light); }
-  .plan-desc { font-size: 0.875rem; color: var(--text-mid); margin-bottom: 28px; margin-top: 8px; }
-  .plan-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
-  .plan-features li { font-size: 0.9rem; color: var(--text-mid); display: flex; align-items: flex-start; gap: 10px; }
-  .plan-features li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-  .plan-btn {
+  .plan-price span { font-size: 1rem; font-weight: 500; color: var(--text-light); font-family: 'Inter', sans-serif; }
+  .plan-desc { font-size: 0.875rem; color: var(--text-mid); margin-bottom: 28px; }
+  .plan-features { list-style: none; margin-bottom: 32px; }
+  .plan-features li {
+    font-size: 0.875rem;
+    color: var(--text-mid);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .plan-features li::before { content: '✓'; color: var(--orange); font-weight: 700; }
+  .btn-plan {
     width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-plan-outline {
+    background: transparent;
+    border: 2px solid var(--border);
+    color: var(--text-dark);
+  }
+  .btn-plan-primary {
     background: var(--orange);
     color: #fff;
-    padding: 14px 0;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: background 0.2s;
   }
-  .plan-btn:hover { background: var(--orange-light); }
-  .plan-btn-ghost {
-    width: 100%;
-    background: transparent;
-    color: var(--orange);
-    padding: 14px 0;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    border: 2px solid var(--orange-border);
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .plan-btn-ghost:hover { border-color: var(--orange); color: var(--orange-light); }
 
   /* FAQ */
-  .faq-section { background: var(--white); }
-  .faq-list { margin-top: 56px; display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+  .faq-bg { background: var(--white); }
+  .faq-list { max-width: 720px; display: flex; flex-direction: column; gap: 16px; }
   .faq-item {
     background: var(--off-white);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 24px 28px;
   }
-  .faq-item h3 { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; }
-  .faq-item p { font-size: 0.875rem; color: var(--text-mid); line-height: 1.7; }
+  .faq-item h3 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+  .faq-item p { font-size: 0.9rem; color: var(--text-mid); }
 
   /* CTA */
   .cta-section {
-    background: linear-gradient(135deg, #FFF3EB 0%, #FAF8F5 100%);
+    background: linear-gradient(135deg, #FFF3EA 0%, #FAF8F5 100%);
     border-top: 1px solid var(--border);
+    text-align: center;
   }
-  .cta-inner { text-align: center; max-width: 600px; margin: 0 auto; }
-  .cta-inner h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 16px; }
-  .cta-inner p { font-size: 1.05rem; color: var(--text-mid); margin-bottom: 36px; }
-  .cta-form { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-  .cta-form input {
-    flex: 1 1 260px;
-    padding: 14px 18px;
-    border: 1.5px solid var(--border);
+  .cta-section h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 16px; }
+  .cta-section p { font-size: 1.05rem; color: var(--text-mid); max-width: 500px; margin: 0 auto 36px; }
+
+  /* EMAIL SIGNUP */
+  .signup-form { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 480px; margin: 0 auto; }
+  .signup-form input {
+    flex: 1;
+    min-width: 220px;
+    padding: 13px 18px;
+    border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 0.95rem;
-    font-family: 'Inter', sans-serif;
-    color: var(--text-dark);
     background: var(--white);
+    color: var(--text-dark);
     outline: none;
   }
-  .cta-form input:focus { border-color: var(--orange); }
+  .signup-form input:focus { border-color: var(--orange); }
 
   /* FOOTER */
   footer {
     background: var(--text-dark);
-    color: rgba(255,255,255,0.5);
-    padding: 40px 0;
-    text-align: center;
-    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    padding: 48px 0 32px;
   }
-  footer .logo { color: #fff; margin-bottom: 12px; display: block; }
-  footer .logo span { color: var(--orange); }
-  footer a { color: rgba(255,255,255,0.5); }
-  footer a:hover { color: var(--orange); }
-
-  @media (max-width: 600px) {
-    .hero-stats { gap: 28px; }
-    .pricing-grid { grid-template-columns: 1fr; }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
   }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  .footer-logo span { color: var(--orange); }
+  footer p { font-size: 0.85rem; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+  .footer-links a:hover { color: var(--orange); text-decoration: none; }
 </style>
 </head>
 <body>
@@ -408,11 +390,10 @@
   <div class="nav-inner">
     <div class="logo">Igni<span>um</span></div>
     <ul class="nav-links">
-      <li><a href="#how">How It Works</a></li>
+      <li><a href="#how">How it works</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#cta" class="nav-cta">Get Started</a></li>
+      <li><a href="#contact" class="nav-cta">Get started</a></li>
     </ul>
   </div>
 </nav>
@@ -422,252 +403,180 @@
   <div class="container">
     <div class="hero-content">
       <div class="hero-badge">🔥 AI-Powered Instagram Growth</div>
-      <h1>We don't post.<br><em>We ignite.</em></h1>
-      <p>Ignium uses algorithmic trend analysis, AI-generated content strategies, and data-driven posting optimization to explode your Instagram presence — real followers, genuine engagement, measurable results.</p>
+      <h1>We don't post.<br>We <em>ignite.</em></h1>
+      <p>Ignium engineers virality for ambitious brands. Algorithmic trend analysis, AI content strategy, and data-driven posting — real followers, genuine engagement, measurable results.</p>
       <div class="hero-actions">
-        <a href="#cta">
-          <button class="btn-primary">Start Growing Today →</button>
-        </a>
-        <a href="#how" class="btn-ghost">See how it works ↓</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">4.2×</div>
-          <div class="stat-label">Average engagement lift</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">90d</div>
-          <div class="stat-label">To meaningful results</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Real, organic growth</div>
-        </div>
+        <a href="#contact"><button class="btn-primary">Start growing today</button></a>
+        <a href="#how"><button class="btn-ghost">See how it works</button></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how-section" id="how">
+<!-- SOCIAL PROOF -->
+<div class="social-proof">
   <div class="container">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">From zero to viral in three steps</h2>
-    <p class="section-sub">We handle the strategy, content, and optimization — you focus on running your business.</p>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">01</div>
-        <h3>Algorithmic Audit</h3>
-        <p>We analyse your current account, competitors, and trending content in your niche to find your fastest path to growth.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">02</div>
-        <h3>AI Strategy Build</h3>
-        <p>Our AI maps out your content calendar, hook formulas, hashtag clusters, and posting schedule — tuned to the algorithm.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">03</div>
-        <h3>Execute & Optimise</h3>
-        <p>We produce and post content, track performance daily, and continuously refine to compound your results every week.</p>
-      </div>
+    <div class="social-proof-inner">
+      <div class="stat"><div class="stat-number">3.2×</div><div class="stat-label">Avg. engagement lift</div></div>
+      <div class="stat"><div class="stat-number">+120K</div><div class="stat-label">Followers generated</div></div>
+      <div class="stat"><div class="stat-number">Nordic</div><div class="stat-label">Market specialists</div></div>
+      <div class="stat"><div class="stat-number">AI-First</div><div class="stat-label">Data-driven strategy</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-bg" id="how">
+  <div class="container">
+    <div class="section-label">Process</div>
+    <h2 class="section-title">From zero to viral in 4 steps</h2>
+    <p class="section-sub">We plug in, analyse, build, and execute — you watch your numbers grow.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Audit & Analyse</h3><p>We dissect your current profile, competitors, and the algorithm to find your growth gaps.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Strategy Build</h3><p>AI-powered content strategy tailored to your brand, niche, and audience — built to spread.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Content Engine</h3><p>We create and optimise content that the algorithm rewards and your audience shares.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Scale & Iterate</h3><p>Real-time analytics, weekly optimisation, and continuous growth — no plateau.</p></div>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services-section" id="services">
+<section id="services">
   <div class="container">
-    <div class="section-label">What We Do</div>
+    <div class="section-label">What we do</div>
     <h2 class="section-title">Everything your Instagram needs</h2>
-    <p class="section-sub">A full-stack growth system — not just posting, but engineering virality at every layer.</p>
+    <p class="section-sub">Full-stack growth management — from content to community to conversions.</p>
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>Trend Analysis</h3>
-        <p>Real-time algorithmic monitoring to identify trending audio, formats, and topics before they peak — so you ride the wave, not miss it.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🤖</div>
-        <h3>AI Content Strategy</h3>
-        <p>AI-generated scripts, hooks, captions, and creative briefs tailored to your brand voice and your audience's psychology.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📅</div>
-        <h3>Posting Optimization</h3>
-        <p>Data-driven scheduling based on when your exact audience is most active and most likely to engage and share.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📈</div>
-        <h3>Growth Analytics</h3>
-        <p>Weekly performance dashboards with clear metrics — reach, follower growth, engagement rate, and ROI tied to real business outcomes.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🎯</div>
-        <h3>Audience Targeting</h3>
-        <p>We identify and engage with your ideal audience segments — driving followers who actually convert, not just vanity metrics.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔥</div>
-        <h3>Reels & Viral Content</h3>
-        <p>Short-form video concepts, editing briefs, and hooks engineered for maximum shares and saves — the currency of reach in 2025.</p>
-      </div>
+      <div class="service-card"><div class="service-icon">📊</div><h3>Algorithmic Trend Analysis</h3><p>We track signals the algorithm rewards in real time so your content always rides the wave.</p></div>
+      <div class="service-card"><div class="service-icon">🤖</div><h3>AI Content Strategy</h3><p>Data-trained content blueprints that drive saves, shares, and follower growth.</p></div>
+      <div class="service-card"><div class="service-icon">🎯</div><h3>Posting Optimisation</h3><p>Right content, right format, right time — precision-engineered for maximum reach.</p></div>
+      <div class="service-card"><div class="service-icon">💬</div><h3>Community Growth</h3><p>We build genuine engagement that converts followers into fans and fans into customers.</p></div>
+      <div class="service-card"><div class="service-icon">📈</div><h3>Performance Analytics</h3><p>Weekly reports, deep-dive dashboards, and clear ROI tracking — no vanity metrics.</p></div>
+      <div class="service-card"><div class="service-icon">🌍</div><h3>Nordic Market Expertise</h3><p>We understand Nordic audiences, aesthetics, and buying behaviour — built in Finland.</p></div>
     </div>
   </div>
 </section>
 
 <!-- RESULTS -->
-<section class="results-section" id="results">
+<section class="results-bg">
   <div class="container">
     <div class="section-label">Results</div>
-    <h2 class="section-title">Numbers that speak for themselves</h2>
-    <p class="section-sub">Brands and creators who work with Ignium see compounding growth — not one-off spikes.</p>
+    <h2 class="section-title">Numbers that move businesses</h2>
+    <p class="section-sub">Real outcomes for real brands — not bots, not shortcuts.</p>
     <div class="results-grid">
-      <div class="result-card">
-        <div class="result-metric">+340%</div>
-        <h3>Reach Growth</h3>
-        <p>Average reach increase within 90 days across accounts in the Nordic e-commerce space.</p>
-      </div>
-      <div class="result-card">
-        <div class="result-metric">+18K</div>
-        <h3>Followers Added</h3>
-        <p>Real, organic followers added per client in the first 6 months — no bots, no shortcuts.</p>
-      </div>
-      <div class="result-card">
-        <div class="result-metric">4.2×</div>
-        <h3>Engagement Rate</h3>
-        <p>Average engagement lift versus pre-Ignium baseline — likes, comments, saves, and shares.</p>
-      </div>
+      <div class="result-card"><div class="result-metric">+340%</div><h3>Follower growth</h3><p>Average follower increase in the first 90 days with our full-service plan.</p></div>
+      <div class="result-card"><div class="result-metric">4.8×</div><h3>Engagement rate</h3><p>Our clients consistently outperform industry benchmarks by nearly 5×.</p></div>
+      <div class="result-card"><div class="result-metric">60 days</div><h3>To first viral post</h3><p>Most brands see their first breakout content within two months of launch.</p></div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="pricing-section" id="pricing">
+<section id="pricing">
   <div class="container">
     <div class="section-label">Pricing</div>
-    <h2 class="section-title">Simple, transparent pricing</h2>
-    <p class="section-sub">No lock-in contracts. No hidden fees. Just results-driven growth packages built for ambitious brands.</p>
+    <h2 class="section-title">Simple, transparent plans</h2>
+    <p class="section-sub">No hidden fees. No lock-in. Just results.</p>
     <div class="pricing-grid">
-
-      <!-- Starter -->
       <div class="pricing-card">
         <div class="plan-name">Starter</div>
         <div class="plan-price">€799 <span>/ month</span></div>
-        <div class="plan-desc">For creators and small brands ready to grow.</div>
+        <div class="plan-desc">Perfect for creators and small brands ready to grow.</div>
         <ul class="plan-features">
-          <li>Algorithmic account audit</li>
-          <li>AI content strategy (12 posts/mo)</li>
-          <li>Hashtag & SEO optimization</li>
-          <li>Weekly performance report</li>
+          <li>Monthly strategy session</li>
+          <li>12 posts per month</li>
+          <li>Trend & hashtag analysis</li>
+          <li>Monthly performance report</li>
           <li>Email support</li>
         </ul>
         <form action="https://api.madmantra.app/api/landing/ignium/checkout" method="POST">
           <input type="hidden" name="productName" value="Ignium Starter Plan">
           <input type="hidden" name="priceCents" value="79900">
-          <button type="submit" class="plan-btn-ghost">Get Started</button>
+          <button type="submit" class="btn-plan btn-plan-outline">Get started</button>
         </form>
       </div>
-
-      <!-- Growth (Featured) -->
       <div class="pricing-card featured">
-        <div class="featured-badge">Most Popular</div>
+        <div class="featured-badge">MOST POPULAR</div>
         <div class="plan-name">Growth</div>
-        <div class="plan-price">€1,299 <span>/ month</span></div>
-        <div class="plan-desc">For brands serious about dominating their niche.</div>
+        <div class="plan-price">€1,499 <span>/ month</span></div>
+        <div class="plan-desc">For brands serious about dominating their niche on Instagram.</div>
         <ul class="plan-features">
-          <li>Everything in Starter</li>
-          <li>Full content production (24 posts/mo)</li>
-          <li>Reels strategy & video briefs</li>
-          <li>Trend monitoring & real-time pivots</li>
-          <li>Audience engagement management</li>
-          <li>Bi-weekly strategy calls</li>
-          <li>Priority Slack support</li>
+          <li>Weekly strategy sessions</li>
+          <li>24 posts per month</li>
+          <li>AI content creation support</li>
+          <li>Stories & Reels strategy</li>
+          <li>Weekly analytics reports</li>
+          <li>Priority support</li>
         </ul>
         <form action="https://api.madmantra.app/api/landing/ignium/checkout" method="POST">
           <input type="hidden" name="productName" value="Ignium Growth Plan">
-          <input type="hidden" name="priceCents" value="129900">
-          <button type="submit" class="plan-btn">Get Started →</button>
+          <input type="hidden" name="priceCents" value="149900">
+          <button type="submit" class="btn-plan btn-plan-primary">Get started</button>
         </form>
       </div>
-
-      <!-- Scale -->
       <div class="pricing-card">
         <div class="plan-name">Scale</div>
-        <div class="plan-price">€2,000 <span>/ month</span></div>
-        <div class="plan-desc">For established brands ready to go all in on Instagram.</div>
+        <div class="plan-price">€1,999 <span>/ month</span></div>
+        <div class="plan-desc">Full-service growth engine for ambitious brands and agencies.</div>
         <ul class="plan-features">
-          <li>Everything in Growth</li>
-          <li>Unlimited content briefs</li>
-          <li>Full account management</li>
-          <li>Paid ads strategy integration</li>
-          <li>Influencer collaboration sourcing</li>
-          <li>Monthly deep-dive analytics</li>
-          <li>Dedicated growth strategist</li>
-          <li>Weekly strategy calls</li>
+          <li>Dedicated growth manager</li>
+          <li>Unlimited content strategy</li>
+          <li>Full content production</li>
+          <li>Influencer outreach</li>
+          <li>Real-time analytics dashboard</li>
+          <li>24/7 priority support</li>
         </ul>
         <form action="https://api.madmantra.app/api/landing/ignium/checkout" method="POST">
           <input type="hidden" name="productName" value="Ignium Scale Plan">
-          <input type="hidden" name="priceCents" value="200000">
-          <button type="submit" class="plan-btn-ghost">Get Started</button>
+          <input type="hidden" name="priceCents" value="199900">
+          <button type="submit" class="btn-plan btn-plan-outline">Get started</button>
         </form>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq-section" id="faq">
+<section class="faq-bg">
   <div class="container">
     <div class="section-label">FAQ</div>
     <h2 class="section-title">Common questions</h2>
+    <p class="section-sub">Everything you need to know before we get started.</p>
     <div class="faq-list">
-      <div class="faq-item">
-        <h3>How quickly will I see results?</h3>
-        <p>Most clients see meaningful engagement lifts within the first 30 days. Significant follower growth and reach expansion typically compounds from month 2–3 onward as the algorithm learns your content patterns.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Is this real, organic growth?</h3>
-        <p>100%. We never use bots, fake followers, or engagement pods. Every follower and every like is earned through high-quality content and algorithmic positioning. This means it's sustainable and safe for your account.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Do you work with brands outside Finland?</h3>
-        <p>Yes. While we're based in Finland and have deep expertise in the Nordic market, we work with ambitious brands across Europe and beyond. Instagram's algorithm is global — our strategies travel well.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Do I need to produce the content myself?</h3>
-        <p>It depends on your plan. On Growth and Scale, we handle creative briefs, scripts, captions, and strategy. For video/photo assets, we collaborate with you or your team — we make the process as hands-off as possible.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Is there a minimum contract length?</h3>
-        <p>No lock-in. We work month-to-month because we believe results should keep you around — not contracts. We do recommend committing to at least 90 days to see the full compounding effect of the strategy.</p>
-      </div>
+      <div class="faq-item"><h3>Do you use bots or fake followers?</h3><p>Never. We only drive real organic growth through content strategy, algorithm optimisation, and genuine community building. Fake numbers don't convert.</p></div>
+      <div class="faq-item"><h3>How quickly will I see results?</h3><p>Most clients see measurable engagement improvements within the first 30 days. Follower growth compounds over 60–90 days as the algorithm starts rewarding consistent quality.</p></div>
+      <div class="faq-item"><h3>Do you work with brands outside the Nordics?</h3><p>Yes — while we're based in Finland and specialise in Nordic markets, our AI-driven approach works for ambitious brands globally.</p></div>
+      <div class="faq-item"><h3>What do I need to provide?</h3><p>Just access to your Instagram account and your brand guidelines. We handle strategy, content direction, and execution.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section" id="cta">
+<!-- CTA / CONTACT -->
+<section class="cta-section" id="contact">
   <div class="container">
-    <div class="cta-inner">
-      <div class="section-label">Get Started</div>
-      <h2 class="section-title">Ready to ignite your growth?</h2>
-      <p>Join ambitious Nordic brands and creators already scaling with Ignium. Drop your email and we'll reach out within 24 hours.</p>
-      <form action="https://api.madmantra.app/api/landing/ignium/signup" method="POST" class="cta-form">
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <input type="text" name="name" placeholder="Your name (optional)">
-        <button type="submit" class="btn-primary">Let's Talk →</button>
-      </form>
-    </div>
+    <div class="section-label">Get started</div>
+    <h2 class="section-title">Ready to ignite your growth?</h2>
+    <p>Join ambitious Nordic brands already growing with Ignium. Drop your email and we'll be in touch within 24 hours.</p>
+    <form action="https://api.madmantra.app/api/landing/ignium/signup" method="POST" class="signup-form">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <input type="text" name="name" placeholder="Your name">
+      <button type="submit" class="btn-primary">Get in touch</button>
+    </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="logo">Igni<span>um</span></div>
-    <p>AI-powered Instagram growth agency. Based in Finland, serving brands worldwide.</p>
-    <p style="margin-top: 16px;">© 2025 Ignium · <a href="mailto:ignium@madmantra.app">ignium@madmantra.app</a></p>
+    <div class="footer-inner">
+      <div class="footer-logo">Igni<span>um</span></div>
+      <p>© 2025 Ignium. AI-powered Instagram growth. Based in Finland.</p>
+      <div class="footer-links">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </div>
 </footer>
 
